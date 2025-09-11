@@ -162,4 +162,10 @@ DO_APP_FUNC_METHODINFO(0x083255C0, LTextMeshProUGUI_set_text__MethodInfo);
 DO_APP_FUNC(0x00FED040, void, LTextMeshProUGUI_set_staticText, (LTextMeshProUGUI* __this, String* value, MethodInfo* method));
 DO_APP_FUNC_METHODINFO(0x083250B0, LTextMeshProUGUI_set_staticText__MethodInfo);
 
+DO_APP_FUNC(0x022DC310, DamageRecord*, DamageRecordProperty_DealDamage, (DamageRecordProperty* __this, AliveEntity* attacker, MyFloat damage, IElement* element, MyVector3 position, EDamageType__Enum type, EDamageElementalType__Enum eType, int32_t skillGroupId, bool isCritical, bool isTriggerElement, int32_t shieldID, MyFloat shieldChg, MethodInfo* method));
+DO_APP_FUNC_METHODINFO(0x082A3910, DamageRecordProperty_DealDamage__MethodInfo);
 
+DO_APP_FUNC(0x01CD8DC0, float, MyFloatUtility_GetFloat, (MyFloat value, MethodInfo* method));
+DO_APP_FUNC_METHODINFO(0x083C2688, MyFloatUtility_GetFloat__MethodInfo);
+DO_APP_FUNC(0x01CD8E40, MyFloat, MyFloatUtility_GetMyFloat, (float value, MethodInfo* method));
+DO_APP_FUNC_METHODINFO(0x083C2900, MyFloatUtility_GetMyFloat__MethodInfo);

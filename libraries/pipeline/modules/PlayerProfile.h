@@ -30,6 +30,7 @@ public:
 
 private:
     std::string  uidtext;
+    std::string  nametext;
     PlayerProfile();  // Private constructor for singleton
 
 

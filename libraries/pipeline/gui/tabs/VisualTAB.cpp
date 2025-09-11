@@ -8,7 +8,8 @@
 #include "../../modules/PlayerProfile.h"
 
 void VisualTAB::Render() {
-    if (ImGui::BeginTabItem("Visual")) {
+    std::string visualtext = ICON_LAYOUT_2_LINE + std::string(" Visual");
+    if (ImGui::BeginTabItem(visualtext.c_str())) {
         // Call FPS module to render its GUI
         FPSModule::GetInstance().RenderGUI();
         FreeCam::GetInstance().RenderGUI();

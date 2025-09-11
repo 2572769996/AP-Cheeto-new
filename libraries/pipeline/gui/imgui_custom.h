@@ -3,6 +3,22 @@
 #include <string>
 #include <vector>
 
+// Remixicon definitions
+//PLAYER
+#define ICON_SWORD_LINE "\uF1CF"
+//SETTINGS
+#define ICON_SETTINGS_3_LINE "\uF0E8"
+//ESP
+#define ICON_EYE_LINE "\uECB5"
+//WORLD
+#define ICON_EARTH_LINE "\uEC7A"
+//VISUAL
+#define ICON_LAYOUT_2_LINE "\uEE7F"
+//about
+#define ICON_SPAM_2_LINE "\uF168"
+
+//github
+#define ICON_GITHUB_FILL "\uEDCA"
 
 // 内联 Toggle Switch (滑块样式)
 inline bool ToggleSwitch(const char* label, bool* v)

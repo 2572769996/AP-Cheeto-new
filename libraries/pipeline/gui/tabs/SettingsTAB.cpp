@@ -4,9 +4,11 @@
 #include "../../modules//UnityExplorerModule.h"
 
 
+
 void SettingsTAB::Render()
 {
-	if (ImGui::BeginTabItem("Settings")) {
+	std::string settingstext = ICON_SETTINGS_3_LINE + std::string(" Settings");
+	if (ImGui::BeginTabItem(settingstext.c_str())) {
 		ImGui::Spacing();
 
 		//ImGui::TextColored(ImVec4(0.0f, 1.0f, 0.8f, 1.0f), "General Settings");
@@ -18,8 +20,10 @@ void SettingsTAB::Render()
 			ToggleConsole(settings.show_console);
 			LOG_INFO("Console {}", settings.show_console ? "Enabled" : "Disabled");
 		}
+	
 		UnityExplorerModule::GetInstance().RenderGUI();
-
+		// Display sword-line icon
+		ImGui::Text("Sword Icon: %s", ICON_SWORD_LINE);
 
 		
 		ImGui::EndTabItem();

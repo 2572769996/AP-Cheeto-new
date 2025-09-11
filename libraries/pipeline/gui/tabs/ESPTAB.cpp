@@ -3,7 +3,8 @@
 #include "../../modules/ESPModule.h"
 
 void ESPTAB::Render() {
-	if (ImGui::BeginTabItem("ESP")) {
+	std::string esptext = ICON_EYE_LINE + std::string(" ESP");
+	if (ImGui::BeginTabItem(esptext.c_str())) {
 		// Call ESP module to render its GUI
 		ESPModule::GetInstance().RenderGUI();
 

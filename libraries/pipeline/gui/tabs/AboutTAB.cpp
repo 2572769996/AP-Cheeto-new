@@ -10,7 +10,8 @@
 bool toggle = false;
 
 void AboutTAB::Render() {
-	if (ImGui::BeginTabItem("About")) {
+	std::string abouttext = ICON_SPAM_2_LINE + std::string(" About");
+	if (ImGui::BeginTabItem(abouttext.c_str())) {
 
 		ImGui::Spacing();
 		ImGui::PushTextWrapPos(ImGui::GetCursorPos().x + 550.0f);
@@ -22,7 +23,7 @@ void AboutTAB::Render() {
 		ImGui::Text("Author: ");
 		ImGui::SameLine();
 		ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "gktwo");
-		ImGui::Text("GitHub: ");
+		ImGui::Text("%s GitHub: ", ICON_GITHUB_FILL);
 		ImGui::SameLine();
 		TextURL("AP-Cheeto-new", "https://github.com/Gktwo/AP-Cheeto-new");
 		//ToggleSwitch("测试切换", &toggle);

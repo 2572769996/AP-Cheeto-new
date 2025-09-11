@@ -15,6 +15,8 @@
 #include <iostream>
 #include <pipeline/gui/GUITheme.h>
 #include "pipeline/HYWenHei.hpp"
+#include "pipeline/remixicon.hpp"
+
 #include "pipeline/gui/tabs/SettingsTAB.h"
 #include "pipeline/gui/tabs/ESPTAB.h"
 #include "pipeline/modules/ModuleManager.h"
@@ -107,12 +109,26 @@ bool ImGuiInitialization(IDXGISwapChain* pSwapChain) {
 
 		ImGui::CreateContext();
 		ImGuiIO& io = ImGui::GetIO();
+
 		io.ConfigFlags = ImGuiConfigFlags_NoMouseCursorChange;
 		ImFontConfig fontConfig;
-		fontConfig.FontDataOwnedByAtlas = false;
 		io.FontDefault = io.Fonts->AddFontFromMemoryCompressedTTF(
 			HYWenHei_compressed_data, *HYWenHei_compressed_data,
 			15.0f, &fontConfig, io.Fonts->GetGlyphRangesChineseFull());
+
+		// Add remixicon font with proper glyph range
+		static const ImWchar remixicon_ranges[] = {
+			0xea01, 0xf5f2, // Remixicon font range
+			0,
+		};
+		ImFontConfig remixiconConfig;
+		remixiconConfig.FontDataOwnedByAtlas = false;
+		remixiconConfig.MergeMode = true;
+		remixiconConfig.PixelSnapH = true;
+		io.Fonts->AddFontFromMemoryCompressedTTF(
+			remixicon_compressed_data, *remixicon_compressed_data,
+			15.0f, &remixiconConfig, remixicon_ranges);
+
 		ImGui_ImplWin32_Init(DirectX::window);
 		ImGui_ImplDX11_Init(pDevice, pContext);
 		

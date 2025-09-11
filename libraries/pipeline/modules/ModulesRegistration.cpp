@@ -8,6 +8,7 @@
 #include "FpsUnlocker.h"
 #include "UnityExplorerModule.h"
 #include "PlayerProfile.h"
+#include "damagehack.h"
 
 #define MODULES(X) \
     X(FPSModule) \
@@ -17,8 +18,8 @@
     X(NoFog)\
     X(FpsUnlocker)\
     X(UnityExplorerModule)\
-    X(PlayerProfile)
-
+    X(PlayerProfile)\
+    X(Damagehack)
 
 #define REGISTER_ONE(Module) REGISTER_MODULE(Module)
 #define REGISTER_ALL() MODULES(REGISTER_ONE)

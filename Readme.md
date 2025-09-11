@@ -11,7 +11,8 @@ This project is a C++ DLL-based modification tool for the AzurPromilia game, bui
 * FPS Unolcker
 * Free Camera
 * NoFog(cant use)
-* UnityExplorer,Inspector
+* PlayerProfile Changer
+* UnityExplorer ; Inspector
 
 
 
@@ -19,7 +20,7 @@ This project is a C++ DLL-based modification tool for the AzurPromilia game, bui
 
 1. Compile the project using Visual Studio(or download from [Action](https://bgithub.xyz/Gktwo/AP-Cheeto-new/actions))
 2. Put the dll file into the game folder
-3. start game ，then press F12 to show the panel
+3. start game , then press F12 to show the panel
 
 
 
