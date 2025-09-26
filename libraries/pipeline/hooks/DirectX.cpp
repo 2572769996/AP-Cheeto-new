@@ -184,7 +184,10 @@ HRESULT __stdcall dPresent(IDXGISwapChain* __this, UINT SyncInterval, UINT Flags
 
 	il2cpp_gc_disable();
 
-	ApplyTheme();
+	//ApplyTheme();
+	ApplyEvangelionUnit01Style();
+	//ApplyEvangelionUnit02Style();
+
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
