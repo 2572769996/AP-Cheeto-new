@@ -24,6 +24,8 @@
 
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
+
+
 HWND DirectX::window;
 ID3D11Device* pDevice = NULL;
 ID3D11DeviceContext* pContext = NULL;
@@ -184,9 +186,8 @@ HRESULT __stdcall dPresent(IDXGISwapChain* __this, UINT SyncInterval, UINT Flags
 
 	il2cpp_gc_disable();
 
-	//ApplyTheme();
-	ApplyEvangelionUnit01Style();
-	//ApplyEvangelionUnit02Style();
+	ApplySelectedTheme(settings.currentTheme);
+ 	//ApplyEvangelionUnit02Style();
 
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();

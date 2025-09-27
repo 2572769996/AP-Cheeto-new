@@ -58,4 +58,3 @@ template<typename T> std::string to_hex_string(T i) {
 
 #define RCAST(Type, Ptr) reinterpret_cast<Type>(Ptr)
 
-bool LoadRCDATAToString( int resId, std::string& out);

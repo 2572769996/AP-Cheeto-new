@@ -20,11 +20,33 @@ void SettingsTAB::Render()
         const char* current_lang = (translator.getLanguage() == Language::en) ? "English" : "简体中文";
         if (ImGui::BeginCombo(TR("Language"), current_lang))
         {
-            if (ImGui::Selectable("English", translator.getLanguage() == Language::en)) {
+            if (ImGui::Selectable("English")) {
                 translator.setLanguage(Language::en);
             }
-            if (ImGui::Selectable("简体中文", translator.getLanguage() == Language::zh_cn)) {
+            if (ImGui::Selectable("简体中文")) {
                 translator.setLanguage(Language::zh_cn);
+            }
+            ImGui::EndCombo();
+        }
+        ImGui::Spacing();
+
+        // Theme Selection
+        
+
+
+        if (ImGui::BeginCombo(TR("Theme"), settings.current_theme_name))
+        {
+            if (ImGui::Selectable(TR("Default"))) {
+                settings.current_theme_name = "Default";
+				settings.currentTheme = GUITheme::Default;
+            }
+            if (ImGui::Selectable("Evangelion Unit 01")) {
+                settings.current_theme_name = "Evangelion Unit 01";
+				settings.currentTheme = GUITheme::EvangelionUnit01;
+            }
+            if (ImGui::Selectable(TR("Evangelion Unit 02"))) {
+                settings.current_theme_name = "Evangelion Unit 02";
+				settings.currentTheme = GUITheme::EvangelionUnit02;
             }
             ImGui::EndCombo();
         }

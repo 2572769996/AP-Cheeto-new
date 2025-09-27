@@ -95,6 +95,7 @@
     <ClCompile Include="libraries\pipeline\modules\PlayerProfile.cpp" />
     <ClCompile Include="libraries\pipeline\modules\damagehack.cpp" />
     <ClCompile Include="user\language.cpp" />
+    <ClCompile Include="framework\ResourceLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="user\main.h">
@@ -211,6 +212,7 @@
     <ClInclude Include="resource.h" />
     <ClInclude Include="libraries\pipeline\remixicon.hpp" />
     <ClInclude Include="user\language.h" />
+    <ClInclude Include="framework\ResourceLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="appdata">

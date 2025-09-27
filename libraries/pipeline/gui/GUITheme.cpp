@@ -1,11 +1,13 @@
-﻿#include "pch-il2cpp.h"
+#include "pch-il2cpp.h"
 
 #include "pipeline/gui/GUITheme.h"
 #include "pipeline/settings.h"
 #include <imgui/imgui.h>
 #include <cmath>
-#include <cstring> // 需要 strlen
-#include <cstdio> // 需要 sscanf
+#include <cstring> 
+#include <cstdio> 
+
+
 ImVec4 HexToImVec4(unsigned int hex) {
     float r = ((hex >> 24) & 0xFF) / 255.0f;
     float g = ((hex >> 16) & 0xFF) / 255.0f;
@@ -30,7 +32,7 @@ ImVec4 StringHexToImVec4(const char* hexString) {
     return ImVec4(r, g, b, a);
 }
 
-void ApplyTheme()
+void ApplyDefaultTheme()
 {
     ImGuiStyle& style = ImGui::GetStyle();
     ImVec4* colors = style.Colors;
@@ -102,6 +104,9 @@ void ApplyTheme()
     style.ScrollbarSize = 15.0f;
     style.GrabMinSize = 10.0f;
 }
+
+
+
 void ApplyEvangelionUnit01Style() {
     ImGuiStyle& style = ImGui::GetStyle();
 
@@ -344,4 +349,22 @@ void ApplyEvangelionUnit02Style() {
     //colors[ImGuiCol_DockingPreview] = StringHexToImVec4("F7B302B3"); // Docking 预览 (橙黄透明)
    // colors[ImGuiCol_DockingEmptyBg] = StringHexToImVec4("1E1E1EFF");
     colors[ImGuiCol_ModalWindowDimBg] = StringHexToImVec4("0000007A"); // 模态窗口变暗背景
+}
+
+
+void ApplySelectedTheme(GUITheme theme) {
+    switch (theme) {
+    case GUITheme::Default:
+        ApplyDefaultTheme();
+        break;
+    case GUITheme::EvangelionUnit01:
+        ApplyEvangelionUnit01Style();
+        break;
+    case GUITheme::EvangelionUnit02:
+        ApplyEvangelionUnit02Style();
+        break;
+    default:
+        ApplyDefaultTheme(); // Fallback to default
+        break;
+    }
 }
