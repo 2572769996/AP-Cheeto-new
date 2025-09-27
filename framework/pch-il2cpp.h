@@ -9,4 +9,6 @@
 #include "../libraries/pipeline/HookManager.h"
 #include "../libraries/Logger/logger.h"
 #include "../libraries/pipeline/gui/imgui_custom.h"
+#include "../resource.h"
+#include "../user/language.h"
 #endif // PCH_IL2CPP_H

@@ -93,6 +93,8 @@
     <ClCompile Include="libraries\pipeline\modules\FpsUnlocker.cpp" />
     <ClCompile Include="libraries\pipeline\modules\UnityExplorerModule.cpp" />
     <ClCompile Include="libraries\pipeline\modules\PlayerProfile.cpp" />
+    <ClCompile Include="libraries\pipeline\modules\damagehack.cpp" />
+    <ClCompile Include="user\language.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="user\main.h">
@@ -205,6 +207,10 @@
     <ClInclude Include="libraries\pipeline\modules\FpsUnlocker.h" />
     <ClInclude Include="libraries\pipeline\modules\UnityExplorerModule.h" />
     <ClInclude Include="libraries\pipeline\modules\PlayerProfile.h" />
+    <ClInclude Include="libraries\pipeline\modules\damagehack.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="libraries\pipeline\remixicon.hpp" />
+    <ClInclude Include="user\language.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="appdata">
@@ -255,5 +261,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="version.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="il2cpp-dll.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="user\LANG.json" />
   </ItemGroup>
 </Project>

@@ -24,9 +24,9 @@ void PlayerProfile::OnUpdate() {
 
 
 void PlayerProfile::RenderGUI() {
-	if (ImGui::CollapsingHeader("PlayerProfile")) {
+	if (ImGui::CollapsingHeader(TR("PlayerProfile"))) {
 		ImGui::Indent();
-		if (ToggleSwitch("Profile changer", &enabled)) {
+		if (ToggleSwitch(TR("Profile changer"), &enabled)) {
 			if (enabled)
 			{
 				app::GameObject* uid = app::GameObject_Find(string_to_il2cppi_app("/[UI Root]/[VisiableWaterMark]/testingWaterMark/markIdText"), nullptr);				
@@ -46,9 +46,9 @@ void PlayerProfile::RenderGUI() {
 			}
 		}
 		if (enabled) {
-			InputText("UID text", &uidtext);
-			InputText("Name text", &nametext);
-			if (ToggleSwitch("Name changer", &enabled)) {
+			InputText(TR("UID text"), &uidtext);
+			InputText(TR("Name text"), &nametext);
+			if (ToggleSwitch(TR("Name changer"), &enabled)) {
 				app::GameObject* name = app::GameObject_Find(string_to_il2cppi_app("/[UI Root]/pagePlayerCard/board/Right/info/title/name/txt_name"), nullptr);
 				if (name != nullptr) {
 					app::Component* LText_comp = app::GameObject_GetComponentByName(name, string_to_il2cppi_app("TextMeshProUGUI"), nullptr);

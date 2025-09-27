@@ -3,7 +3,7 @@
 #include "../../modules/damagehack.h"
 
 void PlayTAB::Render() {
-    std::string playertext = ICON_SWORD_LINE + std::string(" Player");
+    std::string playertext = ICON_SWORD_LINE + std::string(TR(" Player"));
     if (ImGui::BeginTabItem(playertext.c_str())) {
         ImGui::Spacing();
         

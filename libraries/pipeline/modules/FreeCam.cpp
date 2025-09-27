@@ -47,11 +47,11 @@ void FreeCam::OnUpdate() {
 }
 
 void FreeCam::RenderGUI() {
-	if (ImGui::CollapsingHeader("Free Camera")) {
+	if (ImGui::CollapsingHeader(TR("Free Camera"))) {
 		ImGui::Indent();
 		if (
             //ImGui::Checkbox("On/Off", &enabled)
-            ToggleSwitch("On/Off", &enabled)
+            ToggleSwitch(TR("On/Off"), &enabled)
             ) {
 			// enabled state is directly managed by BaseModule
             if (enabled)
@@ -63,24 +63,24 @@ void FreeCam::RenderGUI() {
                 
 		}
 		if (enabled) {
-			ImGui::DragFloat("Move Speed", &MoveSpeed, 1.0f, 0.1f, 30.0f);
-			ImGui::DragFloat("Look Sensitivity", &LookSens, 1.0f, 0.1f, 100.0f);
-			ImGui::DragFloat("Roll Speed", &RollSpeed, 1.0f, 0.1f, 100.0f);
-			ImGui::DragFloat("FOV Speed", &FOVSpeed, 1.0f, 0.1f, 100.0f);
-			ImGui::InputFloat("FOV", &FOV, 1.0f, 1.0f, "%.1f");
+			ImGui::DragFloat(TR("Move Speed"), &MoveSpeed, 1.0f, 0.1f, 30.0f);
+			ImGui::DragFloat(TR("Look Sensitivity"), &LookSens, 1.0f, 0.1f, 100.0f);
+			ImGui::DragFloat(TR("Roll Speed"), &RollSpeed, 1.0f, 0.1f, 100.0f);
+			ImGui::DragFloat(TR("FOV Speed"), &FOVSpeed, 1.0f, 0.1f, 100.0f);
+			ImGui::InputFloat(TR("FOV"), &FOV, 1.0f, 1.0f, TR("%.1f"));
 			//ImGui::SameLine();
 			ImGui::Separator();
-			ImGui::Text("Forward Key: %s", KeyBinds::ToString(f_Forward)); ImGui::SameLine();
-			ImGui::Text("Backward Key: %s", KeyBinds::ToString(f_Backward));
-			ImGui::Text("Left Key: %s", KeyBinds::ToString(f_Left)); ImGui::SameLine();
-			ImGui::Text("Right Key: %s", KeyBinds::ToString(f_Right));
-			ImGui::Text("Up Key: %s", KeyBinds::ToString(f_Up)); ImGui::SameLine();
-			ImGui::Text("Down Key: %s", KeyBinds::ToString(f_Down));
-			ImGui::Text("IncFOV Key: %s", KeyBinds::ToString(f_IncFOV)); ImGui::SameLine();
-			ImGui::Text("DecFOV Key: %s", KeyBinds::ToString(f_DecFOV));
-			ImGui::Text("LeftRoll Key: %s", KeyBinds::ToString(f_LeftRoll)); ImGui::SameLine();
-			ImGui::Text("RightRoll Key: %s", KeyBinds::ToString(f_RightRoll));
-			ImGui::Text("ResetRoll Key: %s", KeyBinds::ToString(f_ResetRoll));
+			ImGui::Text(TR("Forward Key: %s"), KeyBinds::ToString(f_Forward)); ImGui::SameLine();
+			ImGui::Text(TR("Backward Key: %s"), KeyBinds::ToString(f_Backward));
+			ImGui::Text(TR("Left Key: %s"), KeyBinds::ToString(f_Left)); ImGui::SameLine();
+			ImGui::Text(TR("Right Key: %s"), KeyBinds::ToString(f_Right));
+			ImGui::Text(TR("Up Key: %s"), KeyBinds::ToString(f_Up)); ImGui::SameLine();
+			ImGui::Text(TR("Down Key: %s"), KeyBinds::ToString(f_Down));
+			ImGui::Text(TR("IncFOV Key: %s"), KeyBinds::ToString(f_IncFOV)); ImGui::SameLine();
+			ImGui::Text(TR("DecFOV Key: %s"), KeyBinds::ToString(f_DecFOV));
+			ImGui::Text(TR("LeftRoll Key: %s"), KeyBinds::ToString(f_LeftRoll)); ImGui::SameLine();
+			ImGui::Text(TR("RightRoll Key: %s"), KeyBinds::ToString(f_RightRoll));
+			ImGui::Text(TR("ResetRoll Key: %s"), KeyBinds::ToString(f_ResetRoll));
 
 		}
 		ImGui::Unindent();

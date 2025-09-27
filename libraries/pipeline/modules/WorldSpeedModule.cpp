@@ -29,11 +29,11 @@ void WorldSpeedModule::OnUpdate() {
 }
 
 void WorldSpeedModule::RenderGUI() {
-	if (ImGui::CollapsingHeader("World Speed")) {
+	if (ImGui::CollapsingHeader(TR("World Speed"))) {
 		ImGui::Indent();
 		if (
 			//ImGui::Checkbox("Enable World Speed", &enabled)
-			ToggleSwitch("Enable World Speed", &enabled)
+			ToggleSwitch(TR("Enable World Speed"), &enabled)
 			) {
 			if (enabled) {
 				EnableWorldSpeed();
@@ -45,17 +45,17 @@ void WorldSpeedModule::RenderGUI() {
 			}
 		}
 		ImGui::SameLine();
-		if (ImGui::Button("Reset")) {
+		if (ImGui::Button(TR("Reset"))) {
 			ResetSpeed();
 		}
 		if (enabled) {
 			ImGui::Indent();
-			ImGui::SliderFloat("Speed Value", &world_speed_value, 0.1f, 20.0f, "%.1f");
+			ImGui::SliderFloat(TR("Speed Value"), &world_speed_value, 0.1f, 20.0f, "%.1f");
 			ImGui::Unindent();
 		}
-		ImGui::Text("Toggle Key: %s", KeyBinds::ToString(toggle_key));
+		ImGui::Text(TR("Toggle Key: %s"), KeyBinds::ToString(toggle_key));
 		ImGui::SameLine();
-		if (ImGui::Button("Change##world_speed_key")) {
+		if (ImGui::Button(TR("Change##world_speed_key"))) {
 		}
 		ImGui::Unindent();
 	}

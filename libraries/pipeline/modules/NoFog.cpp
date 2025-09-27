@@ -27,11 +27,11 @@ void NoFog::OnUpdate() {
 }
 
 void NoFog::RenderGUI() {
-	if (ImGui::CollapsingHeader("No Fog")) {
+	if (ImGui::CollapsingHeader(TR("No Fog"))) {
 		ImGui::Indent();
 		if (
 			//ImGui::Checkbox("Enable No Fog", &enabled)
-			ToggleSwitch("Enable No Fog", &enabled)
+			ToggleSwitch(TR("Enable No Fog"), &enabled)
 			) {
 			if (enabled) {
 				EnableNoFog();

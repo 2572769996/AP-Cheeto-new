@@ -24,11 +24,11 @@ void FpsUnlocker::OnUpdate() {
 }
 
 void FpsUnlocker::RenderGUI() {
-    if (ImGui::CollapsingHeader("Fps Unlocker")) {
+    if (ImGui::CollapsingHeader(TR("Fps Unlocker"))) {
         ImGui::Indent();
         if (
             //ImGui::Checkbox("Show FPS Overlay", &enabled)
-            ToggleSwitch("Fps Unlocker Enabled", &enabled)
+            ToggleSwitch(TR("Fps Unlocker Enabled"), &enabled)
             ) {
             if (enabled) {
                 EnableFpsUnlocker();
@@ -42,10 +42,10 @@ void FpsUnlocker::RenderGUI() {
         }
         if (enabled) {
             ImGui::Indent();
-            if (ImGui::DragInt("Fps Value", &fpsvalue, 1, -1, 500))
+            if (ImGui::DragInt(TR("Fps Value"), &fpsvalue, 1, -1, 500))
                 Unlimited = false;
 			
-            if (ToggleSwitch("Unlimited", &Unlimited)) {
+            if (ToggleSwitch(TR("Unlimited"), &Unlimited)) {
                 if (Unlimited)
                     fpsvalue = -1;
                 else

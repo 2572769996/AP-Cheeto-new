@@ -10,17 +10,17 @@
 bool toggle = false;
 
 void AboutTAB::Render() {
-	std::string abouttext = ICON_SPAM_2_LINE + std::string(" About");
+	std::string abouttext = ICON_SPAM_2_LINE + std::string(TR(" About"));
 	if (ImGui::BeginTabItem(abouttext.c_str())) {
 
 		ImGui::Spacing();
 		ImGui::PushTextWrapPos(ImGui::GetCursorPos().x + 550.0f);
 		ImGui::PopTextWrapPos();
 		ImGui::Text( "Game: AzurPromilia cbt1 ");
-		ImGui::Text("Version: ");
+		ImGui::Text(TR("Version: "));
 		ImGui::SameLine();
 		ImGui::TextColored(ImVec4(1.0f, 1.0f, 0.0f, 1.0f), "0.0.9");
-		ImGui::Text("Author: ");
+		ImGui::Text(TR("Author: "));
 		ImGui::SameLine();
 		ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "gktwo");
 		ImGui::Text("%s GitHub: ", ICON_GITHUB_FILL);

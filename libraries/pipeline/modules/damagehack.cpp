@@ -32,10 +32,10 @@ void Damagehack::OnUpdate() {
 }
 
 void Damagehack::RenderGUI() {
-	if (ImGui::CollapsingHeader("Damagehack")) {
+	if (ImGui::CollapsingHeader(TR("Damagehack"))) {
 		ImGui::Indent();
 		if (
-			ToggleSwitch("Damagehack enabled", &enabled)
+			ToggleSwitch(TR("Damagehack Toggle"), &enabled)
 			) {
 			if (enabled) {
 				EnableDamagehack();
@@ -47,11 +47,11 @@ void Damagehack::RenderGUI() {
 			}
 		}
 		if (enabled) {
-			ToggleSwitch("Damage Multiplier", &damageMultiplier);
+			ToggleSwitch(TR("Damage Multiplier"), &damageMultiplier);
 			if (damageMultiplier) {
-				ImGui::InputInt("Multiplier Value", &damageMultiplier_value);
+				ImGui::InputInt(TR("Multiplier Value"), &damageMultiplier_value);
 			}
-			ToggleSwitch("Random Damage Type", &randomDamageType);
+			ToggleSwitch(TR("Random Damage Type"), &randomDamageType);
 		
 		
 		}

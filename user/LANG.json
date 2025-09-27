@@ -1,0 +1,290 @@
+{
+    " About": {
+        "en": " About",
+        "zh_cn": " 关于"
+    },
+    " ESP": {
+        "en": " ESP",
+        "zh_cn": "ESP"
+    },
+    " Player": {
+        "en": " Player",
+        "zh_cn": "玩家"
+    },
+    " Visual": {
+        "en": " Visual",
+        "zh_cn": "可视化"
+    },
+    " World": {
+        "en": " World",
+        "zh_cn": "世界"
+    },
+    "Settings": {
+        "en": "Settings",
+        "zh_cn": "设置"
+    },
+    "Language": {
+        "en": "Language",
+        "zh_cn": "语言"
+    },
+    "Console": {
+        "en": "Console",
+        "zh_cn": "控制台"
+    },
+    "enabled": {
+        "en": "enabled",
+        "zh_cn": "已启用"
+    },
+    "Disabled": {
+        "en": "Disabled",
+        "zh_cn": "已禁用"
+    },
+    "Toggle Console": {
+        "en": "Toggle Console",
+        "zh_cn": "切换控制台"
+    },
+    "Author: ": {
+        "en": "Author: ",
+        "zh_cn": "作者: "
+    },
+    "Version: ": {
+        "en": "Version: ",
+        "zh_cn": "版本: "
+    },
+    "Damagehack Toggle": {
+        "en": "Damagehack Toggle",
+        "zh_cn": "伤害修改"
+    },
+    "Damage Multiplier": {
+        "en": "Damage Multiplier",
+        "zh_cn": "伤害倍数"
+    },
+    "Multiplier Value": {
+        "en": "Multiplier Value",
+        "zh_cn": "倍数值"
+    },
+    "Random Damage Type": {
+        "en": "Random Damage Type",
+        "zh_cn": "随机伤害类型"
+    },
+    "ESP Features": {
+        "en": "ESP Features",
+        "zh_cn": "ESP功能"
+    },
+    "ESP Enabled": {
+        "en": "ESP Enabled",
+        "zh_cn": "ESP已启用"
+    },
+    "Toggle Key: %s": {
+        "en": "Toggle Key: %s",
+        "zh_cn": "切换键: %s"
+    },
+    "Change##esp_key": {
+        "en": "Change##esp_key",
+        "zh_cn": "更改##esp_key"
+    },
+    "Display Types": {
+        "en": "Display Types",
+        "zh_cn": "显示类型"
+    },
+    "Show Monsters": {
+        "en": "Show Monsters",
+        "zh_cn": "显示怪物"
+    },
+    "Show NPCs": {
+        "en": "Show NPCs",
+        "zh_cn": "显示NPC"
+    },
+    "Show Friendly": {
+        "en": "Show Friendly",
+        "zh_cn": "显示友方"
+    },
+    "Show Puzzles": {
+        "en": "Show Puzzles",
+        "zh_cn": "显示谜题"
+    },
+    "Show All": {
+        "en": "Show All",
+        "zh_cn": "显示全部"
+    },
+    "Display Info": {
+        "en": "Display Info",
+        "zh_cn": "显示信息"
+    },
+    "Show Distance": {
+        "en": "Show Distance",
+        "zh_cn": "显示距离"
+    },
+    "Show Config ID": {
+        "en": "Show Config ID",
+        "zh_cn": "显示配置ID"
+    },
+    "Show Config Name": {
+        "en": "Show Config Name",
+        "zh_cn": "显示配置名称"
+    },
+    "Show Entity ID": {
+        "en": "Show Entity ID",
+        "zh_cn": "显示实体ID"
+    },
+    "Show Type": {
+        "en": "Show Type",
+        "zh_cn": "显示类型"
+    },
+    "m": {
+        "en": "m",
+        "zh_cn": "米"
+    },
+    "FPS Monitor": {
+        "en": "FPS Monitor",
+        "zh_cn": "FPS监控"
+    },
+    "Show FPS Overlay": {
+        "en": "Show FPS Overlay",
+        "zh_cn": "显示FPS覆盖"
+    },
+    "Change##fps_key": {
+        "en": "Change##fps_key",
+        "zh_cn": "更改##fps_key"
+    },
+    "FPS: ": {
+        "en": "FPS: ",
+        "zh_cn": "FPS: "
+    },
+    "Frame Time: %.2f ms": {
+        "en": "Frame Time: %.2f ms",
+        "zh_cn": "帧时间: %.2f 毫秒"
+    },
+    "Fps Unlocker": {
+        "en": "Fps Unlocker",
+        "zh_cn": "帧率解锁器"
+    },
+    "Fps Unlocker Enabled": {
+        "en": "Fps Unlocker Enabled",
+        "zh_cn": "帧率解锁已启用"
+    },
+    "Fps Value": {
+        "en": "Fps Value",
+        "zh_cn": "帧率值"
+    },
+    "Unlimited": {
+        "en": "Unlimited",
+        "zh_cn": "无限制"
+    },
+    "Free Camera": {
+        "en": "Free Camera",
+        "zh_cn": "自由视角"
+    },
+    "On/Off": {
+        "en": "On/Off",
+        "zh_cn": "开/关"
+    },
+    "Move Speed": {
+        "en": "Move Speed",
+        "zh_cn": "移动速度"
+    },
+    "Look Sensitivity": {
+        "en": "Look Sensitivity",
+        "zh_cn": "视角灵敏度"
+    },
+    "Roll Speed": {
+        "en": "Roll Speed",
+        "zh_cn": "翻滚速度"
+    },
+    "FOV Speed": {
+        "en": "FOV Speed",
+        "zh_cn": "FOV速度"
+    },
+    "FOV": {
+        "en": "FOV",
+        "zh_cn": "FOV"
+    },
+    "Forward Key: %s": {
+        "en": "Forward Key: %s",
+        "zh_cn": "前进键: %s"
+    },
+    "Backward Key: %s": {
+        "en": "Backward Key: %s",
+        "zh_cn": "后退键: %s"
+    },
+    "Left Key: %s": {
+        "en": "Left Key: %s",
+        "zh_cn": "左移键: %s"
+    },
+    "Right Key: %s": {
+        "en": "Right Key: %s",
+        "zh_cn": "右移键: %s"
+    },
+    "Up Key: %s": {
+        "en": "Up Key: %s",
+        "zh_cn": "上移键: %s"
+    },
+    "Down Key: %s": {
+        "en": "Down Key: %s",
+        "zh_cn": "下移键: %s"
+    },
+    "IncFOV Key: %s": {
+        "en": "IncFOV Key: %s",
+        "zh_cn": "增加FOV键: %s"
+    },
+    "DecFOV Key: %s": {
+        "en": "DecFOV Key: %s",
+        "zh_cn": "减少FOV键: %s"
+    },
+    "LeftRoll Key: %s": {
+        "en": "LeftRoll Key: %s",
+        "zh_cn": "左翻滚键: %s"
+    },
+    "RightRoll Key: %s": {
+        "en": "RightRoll Key: %s",
+        "zh_cn": "右翻滚键: %s"
+    },
+    "ResetRoll Key: %s": {
+        "en": "ResetRoll Key: %s",
+        "zh_cn": "重置翻滚键: %s"
+    },
+    "No Fog": {
+        "en": "No Fog",
+        "zh_cn": "无雾"
+    },
+    "Enable No Fog": {
+        "en": "Enable No Fog",
+        "zh_cn": "启用无雾"
+    },
+    "PlayerProfile": {
+        "en": "PlayerProfile",
+        "zh_cn": "玩家档案"
+    },
+    "Profile changer": {
+        "en": "Profile changer",
+        "zh_cn": "档案修改器"
+    },
+    "UID text": {
+        "en": "UID text",
+        "zh_cn": "UID文本"
+    },
+    "Name text": {
+        "en": "Name text",
+        "zh_cn": "名称文本"
+    },
+    "Name changer": {
+        "en": "Name changer",
+        "zh_cn": "名称修改器"
+    },
+    "World Speed": {
+        "en": "World Speed",
+        "zh_cn": "世界速度"
+    },
+    "Enable World Speed": {
+        "en": "Enable World Speed",
+        "zh_cn": "启用世界速度"
+    },
+    "Reset": {
+        "en": "Reset",
+        "zh_cn": "重置"
+    },
+    "Speed Value": {
+        "en": "Speed Value",
+        "zh_cn": "速度值"
+    }
+}

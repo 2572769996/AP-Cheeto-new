@@ -23,17 +23,17 @@ void FPSModule::OnUpdate() {
 }
 
 void FPSModule::RenderGUI() {
-    if (ImGui::CollapsingHeader("FPS Monitor")) {
+    if (ImGui::CollapsingHeader(TR("FPS Monitor"))) {
         ImGui::Indent();
         if (
            //ImGui::Checkbox("Show FPS Overlay", &enabled)
-            ToggleSwitch("Show FPS Overlay", &enabled)
+            ToggleSwitch(TR("Show FPS Overlay"), &enabled)
             ) {
             // enabled state is directly managed by BaseModule
         }
-        ImGui::Text("Toggle Key: %s", KeyBinds::ToString(toggle_key));
+        ImGui::Text(TR("Toggle Key: %s"), KeyBinds::ToString(toggle_key));
         ImGui::SameLine();
-        if (ImGui::Button("Change##fps_key")) {
+        if (ImGui::Button(TR("Change##fps_key"))) {
         }
         ImGui::Unindent();
     }
@@ -47,11 +47,11 @@ void FPSModule::RenderOverlay() {
     ImGui::GetForegroundDrawList()->AddText(
         pos, 
         ImGui::ColorConvertFloat4ToU32(GetFPSColor(fps)), 
-        ("FPS: " + std::to_string((int)fps)).c_str()
+        (TR("FPS: ") + std::to_string((int)fps)).c_str()
     );
     pos.y += 25.0f;
     char frame_time_str[32];
-    sprintf_s(frame_time_str, "Frame Time: %.2f ms", frame_time);
+    sprintf_s(frame_time_str, TR("Frame Time: %.2f ms"), frame_time);
     ImGui::GetForegroundDrawList()->AddText(
         pos, 
         ImGui::ColorConvertFloat4ToU32(GetFrameTimeColor(frame_time)), 

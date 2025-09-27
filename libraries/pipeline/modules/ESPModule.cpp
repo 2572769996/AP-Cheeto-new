@@ -45,36 +45,36 @@ void ESPModule::OnUpdate() {
 }
 
 void ESPModule::RenderGUI() {
-    if (ImGui::CollapsingHeader("ESP Features")) {
+    if (ImGui::CollapsingHeader(TR("ESP Features"))) {
         ImGui::Indent();
        // ImGui::Checkbox("ESP Enabled", &enabled);
-        ToggleSwitch("ESP Enabled", &enabled);
-        ImGui::Text("Toggle Key: %s", KeyBinds::ToString(toggle_key));
+        ToggleSwitch(TR("ESP Enabled"), &enabled);
+        ImGui::Text(TR("Toggle Key: %s"), KeyBinds::ToString(toggle_key));
         ImGui::SameLine();
-        if (ImGui::Button("Change##esp_key")) {
+        if (ImGui::Button(TR("Change##esp_key"))) {
         }
         if (enabled) {
             ImGui::Spacing();
-            if (ImGui::TreeNode("Display Types")) {
-                ImGui::Checkbox("Show Monsters", &show_monster);
+            if (ImGui::TreeNode(TR("Display Types"))) {
+                ImGui::Checkbox(TR("Show Monsters"), &show_monster);
                 ImGui::SameLine();
-                ImGui::Checkbox("Show NPCs", &show_npc);
+                ImGui::Checkbox(TR("Show NPCs"), &show_npc);
                 ImGui::SameLine();
-                ImGui::Checkbox("Show Friendly", &show_friendly);
-                ImGui::Checkbox("Show Puzzles", &show_puzzle);
+                ImGui::Checkbox(TR("Show Friendly"), &show_friendly);
+                ImGui::Checkbox(TR("Show Puzzles"), &show_puzzle);
                 ImGui::SameLine();
-                ImGui::Checkbox("Show All", &show_all);
+                ImGui::Checkbox(TR("Show All"), &show_all);
                 ImGui::TreePop();
             }
-            if (ImGui::TreeNode("Display Info")) {
-                ImGui::Checkbox("Show Distance", &show_distance);
+            if (ImGui::TreeNode(TR("Display Info"))) {
+                ImGui::Checkbox(TR("Show Distance"), &show_distance);
                 ImGui::SameLine();
-                ImGui::Checkbox("Show Config ID", &show_configid);
+                ImGui::Checkbox(TR("Show Config ID"), &show_configid);
                 ImGui::SameLine();
-                ImGui::Checkbox("Show Config Name", &show_configname);
-                ImGui::Checkbox("Show Entity ID", &show_entityid);
+                ImGui::Checkbox(TR("Show Config Name"), &show_configname);
+                ImGui::Checkbox(TR("Show Entity ID"), &show_entityid);
                 ImGui::SameLine();
-                ImGui::Checkbox("Show Type", &show_type);
+                ImGui::Checkbox(TR("Show Type"), &show_type);
                 ImGui::TreePop();
             }
         }
@@ -118,7 +118,7 @@ void ESPModule::drawESP() {
         if (rect.z < 0.1f) continue;
         std::string showtext = "";
         if (show_distance) {
-            addtext(showtext, (std::to_string((int)distance) + "m"), true);
+            addtext(showtext, (std::to_string((int)distance) + TR("m")), true);
         }
         if (show_configid) {
             int id = app::BaseData_get_configId(data, nullptr);
